@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FAP — Ferramenta de Apoio à Programação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Nunito+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="crest" viewBox="0 0 16 16"><path fill="#F2B84B" d="M1 14V6h3V3h2v3h1V2h2v4h1V3h2v3h3v8z"/><path fill="#07182D" d="M7 9h2v5H7zM3 8h1v2H3zM12 8h1v2h-1z"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10H3zM9 21v-6h6v6"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h12a3 3 0 013 3v13H7a3 3 0 01-3-3zM4 17a3 3 0 013-3h12"/></symbol>
+<symbol id="i-lib" viewBox="0 0 24 24"><path d="M5 3h4v18H5zM11 3h4v18h-4zM17 5l4 1-3 15-4-1z"/></symbol>
+<symbol id="i-tr" viewBox="0 0 24 24"><path d="M4 5h9M8 3v2M6 5c1 5 4 8 7 9M12 5c-1 5-4 8-8 9M14 21l4-10 4 10M15.5 18h5"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><path d="M4 6h16v14H4zM4 10h16M8 3v4M16 3v4"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M2 20h20"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 01-10 0zM7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M12 14v4M8 21h8"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM12 11v6M12 7.5v.5"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 0116 0"/></symbol>
+<symbol id="i-set" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M16 5v4M8 15v4"/></symbol>
+<symbol id="i-out" viewBox="0 0 24 24"><path d="M10 4H4v16h6M15 8l4 4-4 4M19 12H9"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="M14 10a4 4 0 11-2 3.4L4 21v-3h3v-3h3l2-2.4"/></symbol>
+<symbol id="i-col" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<g id="t" fill="#07566C"><rect x="3" width="2" height="3"/><rect x="2" y="3" width="4" height="3"/><rect x="1" y="6" width="6" height="3"/><rect y="9" width="8" height="3"/><rect x="3" y="12" width="2" height="3" fill="#0B1F3A"/></g>
+<g id="h"><rect y="6" width="14" height="9" fill="#123B67"/><path d="M-2 6h18v-2h-2V2h-2V0H4v2H2v2H0z" fill="#07566C"/><rect x="3" y="9" width="3" height="3" fill="#F2B84B"/><rect x="9" y="9" width="2" height="6" fill="#B27A1F"/></g>
+<g id="sc" shape-rendering="crispEdges">
+<g fill="#C5E1F5"><rect x="6" y="6" width="1" height="1" class="tw"/><rect x="22" y="14" width="1" height="1"/><rect x="40" y="5" width="1" height="1" class="tw"/><rect x="58" y="18" width="1" height="1"/><rect x="76" y="8" width="1" height="1" class="tw"/><rect x="94" y="22" width="1" height="1"/><rect x="112" y="4" width="1" height="1" class="tw"/><rect x="130" y="16" width="1" height="1"/><rect x="190" y="6" width="1" height="1" class="tw"/><rect x="226" y="18" width="1" height="1"/><rect x="232" y="8" width="1" height="1" class="tw"/><rect x="172" y="22" width="1" height="1"/></g>
+<circle cx="158" cy="16" r="16" fill="#78A9D6" opacity=".12"/>
+<path d="M154 10h8v2h2v8h-2v2h-8v-2h-2v-8h2z" fill="#C5E1F5"/>
+<path fill="#123B67" d="M0 62h16v-8h12v-8h12v8h10v-6h12v6h10v8h12v-12h12v-10h12v10h10v8h14v-8h12v-12h14v12h10v-8h10v8h16v6h14v-8h14v8h18v38H0z"/>
+<path fill="#0B1F3A" d="M0 76h14v-6h10v-8h10v8h12v-6h14v6h12v-10h12v10h10v6h14v-8h10v-6h10v6h12v8h14v-6h12v6H240v24H0z"/>
+<path fill="#07182D" d="M0 80h40v-2h50v2h50v-2h30v2h70v22H0z"/>
+<path fill="#07182D" d="M168 100V82h6v-4h10v-4h38v4h8v4h6v18z"/>
+<g fill="#315F91"><rect x="190" y="50" width="22" height="24"/><rect x="184" y="42" width="10" height="32"/><rect x="208" y="38" width="10" height="36"/><rect x="190" y="47" width="4" height="3"/><rect x="196" y="47" width="4" height="3"/><rect x="202" y="47" width="4" height="3"/></g>
+<g fill="#07566C"><rect x="184" y="40" width="10" height="2"/><rect x="186" y="37" width="6" height="3"/><rect x="188" y="34" width="2" height="3"/><rect x="208" y="36" width="10" height="2"/><rect x="210" y="33" width="6" height="3"/><rect x="212" y="30" width="2" height="3"/></g>
+<rect x="213" y="25" width="1" height="5" fill="#C5E1F5"/><rect x="214" y="25" width="4" height="3" fill="#168FA6"/>
+<rect x="184" y="42" width="34" height="32" fill="#F2B84B" opacity=".07"/>
+<g fill="#F2B84B"><rect x="188" y="46" width="2" height="4"/><rect x="212" y="44" width="2" height="4"/><rect x="196" y="58" width="3" height="5"/><rect x="204" y="58" width="3" height="5"/><rect x="188" y="58" width="2" height="4"/><rect x="212" y="58" width="2" height="4"/><rect x="200" y="66" width="4" height="8" fill="#B27A1F"/><rect x="200" y="66" width="4" height="1"/></g>
+<use href="#h" x="70" y="65"/><use href="#h" x="98" y="67"/>
+<use href="#t" x="6" y="66"/><use href="#t" x="17" y="70"/><use href="#t" x="28" y="65"/><use href="#t" x="128" y="70"/><use href="#t" x="140" y="66"/><use href="#t" x="152" y="71"/><use href="#t" x="224" y="70"/><use href="#t" x="233" y="66"/>
+</g>
+</defs></svg>
+
+<div id="v-home" class="app">
+<div class="scrim" id="scrim"></div>
+<aside id="side" aria-label="Menu lateral">
+<a class="brand" href="#inicio"><svg class="crest" aria-hidden="true"><use href="#crest"/></svg><span class="bt"><b>FAP</b><small>Ferramenta de Apoio à Programação</small></span></a>
+<div class="grp">Navegação</div><nav aria-label="Principal" id="n1"></nav>
+<div class="grp">Área do usuário</div><nav aria-label="Conta" id="n2"></nav>
+<div class="sp"></div>
+<button type="button" class="nav dsk" id="col" aria-expanded="true"><svg class="i" aria-hidden="true"><use href="#i-col"/></svg><span class="lab">Recolher menu</span></button>
+</aside>
+<div class="col">
+<header class="top"><button type="button" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="side"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button><b>FAP</b></header>
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+<svg class="scene" viewBox="0 0 240 100" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Vila medieval sob a lua, com um castelo de janelas douradas ao fundo"><use href="#sc"/></svg>
+<div class="fx"></div>
+<div class="in">
+<small>Ferramenta de Apoio à Programação</small>
+<h1 id="h1">Sua jornada pelo mundo da programação começa aqui.</h1>
+<p>Um ambiente educacional pensado para tornar o aprendizado de programação mais acessível, organizado e envolvente.</p>
+<a class="btn" href="#entrar">Entrar na academia</a><a class="btn ghost" href="#modulos">Ver módulos propostos</a>
+</div>
+</section>
+<div class="wrap">
+<section class="s" aria-labelledby="h-ini">
+<h2 id="h-ini">Sua mesa de estudos</h2>
+<p class="lead">A FAP reúne aulas, livros digitais, exercícios e acompanhamento de progresso para estudantes de Tecnologia da Informação, especialmente ingressantes do CEFET-MG. É um projeto educacional independente.</p>
+<div class="g">
+<div class="px card"><svg class="i" aria-hidden="true"><use href="#i-chart"/></svg><h3>Resumo do progresso</h3><p class="nc">não concluído</p></div>
+<div class="px card"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg><h3>Aulas recentes</h3><p class="nc">não concluído</p></div>
+<div class="px card"><svg class="i" aria-hidden="true"><use href="#i-lib"/></svg><h3>Biblioteca digital</h3><p class="nc">não concluído</p></div>
+</div>
+</section>
+<section class="s" id="modulos" aria-labelledby="h-mod">
+<h2 id="h-mod">Módulos de aprendizagem</h2>
+<p class="lead">Proposta de currículo independente, do introdutório ao avançado. Ela não representa o currículo oficial do CEFET-MG, que ainda não foi verificado.</p>
+<div class="g mods" id="mods"></div>
+</section>
+<section class="s" id="sobre-falp" aria-labelledby="h-falp">
+<div class="px falp">
+<h2 id="h-falp">Conheça a FALP</h2>
+<p>A FALP — Ferramenta de Apoio Linguístico para Programação — é um projeto de pesquisa dentro do ecossistema FAP. Seu foco é o apoio linguístico: o inglês técnico da programação e a relação entre a linguagem natural e o código.</p>
+<p>No site original, você cola uma mensagem de erro em inglês e recebe a explicação palavra por palavra.</p>
+<a class="falp-btn" href="#falp">Conheça a FALP<svg class="i" aria-hidden="true"><use href="#i-tr"/></svg></a>
+<p class="note">Prefere o site original? <a href="https://printfbelmiro.github.io/FALP/" target="_blank" rel="noopener">Abrir o projeto original (nova aba)</a>.</p>
+</div>
+</section>
+</div>
+<footer>Protótipo em construção.</footer>
+<div id="fv" class="wrap" hidden>
+<section class="s" aria-labelledby="h-fv"><div class="px falp">
+<h2 id="h-fv">FALP</h2>
+<p>Ferramenta de Apoio Linguístico para Programação. Cole uma mensagem de erro em inglês e entenda o que ela quer dizer, palavra por palavra.</p>
+<div class="ptabs" role="tablist" aria-label="Seções da FALP"><button type="button" role="tab" aria-selected="true" data-p="a">Analisar</button><button type="button" role="tab" aria-selected="false" data-p="d">Dúvidas frequentes</button><button type="button" role="tab" aria-selected="false" data-p="h">Histórico</button></div>
+<div id="p-a"><label for="fin">Cole aqui o erro ou o código (Ctrl+Enter para explicar)</label><textarea id="fin" spellcheck="false"></textarea>
+<div class="row"><label for="fl">Linguagem:</label><select id="fl"><option>Automática</option><option>Python</option><option>JavaScript</option></select><button type="button" class="btn" id="exp">Explicar</button><button type="button" class="btn ghost" id="clr">Limpar</button></div>
+<div id="out" aria-live="polite"></div><p class="note" style="margin-top:.9rem">Esta versão usa uma base de erros inicial feita para a FAP, não a base do site original.</p></div>
+<div id="p-d" hidden><details class="px res" open><summary>O que a FALP faz?</summary><p>Ela explica, em português, mensagens de erro escritas em inglês, mostrando o que cada palavra quer dizer.</p></details><details class="px res"><summary>Quais linguagens ela entende?</summary><p>Python e JavaScript. No modo automático, ela tenta reconhecer a linguagem pela própria mensagem.</p></details><details class="px res"><summary>Por que algumas mensagens não são reconhecidas?</summary><p>A base de erros ainda é pequena. Nesses casos, você vê só a tradução palavra por palavra.</p></details><details class="px res"><summary>Onde fica salvo o meu histórico?</summary><p>Somente neste navegador, neste aparelho. Se você apagar os dados do navegador, ele some.</p></details></div>
+<div id="p-h" hidden><div class="row"><button type="button" class="btn ghost" id="hc">Limpar histórico</button></div><div id="hl"></div></div>
+<p class="note">Protótipo de pesquisa de iniciação científica. A base de erros ainda é pequena e vai crescer. <a href="https://printfbelmiro.github.io/FALP/" target="_blank" rel="noopener">Abrir o projeto original (nova aba)</a>.</p>
+</div></section>
+</div>
+</main>
+</div>
+</div>
+
+<section id="v-login" class="login" hidden aria-labelledby="h-login">
+<svg class="scene" viewBox="0 0 240 100" preserveAspectRatio="xMaxYMax slice" aria-hidden="true"><use href="#sc"/></svg>
+<div class="fx"></div>
+<div class="px panel">
+<a class="back" href="#inicio">← Voltar à prévia</a>
+<div class="brand" style="padding:0"><svg class="crest" aria-hidden="true"><use href="#crest"/></svg><span class="bt"><b>FAP</b><small>Academia de Programação</small></span></div>
+<h1 id="h-login">Entre na academia</h1>
+<div class="tabs" role="tablist" aria-label="Acesso">
+<button type="button" role="tab" aria-selected="true" data-m="login">Entrar</button>
+<button type="button" role="tab" aria-selected="false" data-m="register">Criar conta</button>
+<button type="button" role="tab" aria-selected="false" data-m="recover">Recuperar senha</button>
+</div>
+<form id="f" novalidate>
+<div data-m="register" hidden><label for="nm">Nome</label><input id="nm" type="text" autocomplete="name"></div>
+<div data-m="login"><label for="u1">Usuário ou e-mail</label><input id="u1" type="text" autocomplete="username"></div>
+<div data-m="register recover" hidden><label for="u2">E-mail</label><input id="u2" type="email" autocomplete="email"></div>
+<div data-m="login register"><label for="pw">Senha</label><div class="pw"><input id="pw" type="password" autocomplete="current-password"><button type="button" class="eye" id="eye" aria-pressed="false" aria-controls="pw">Mostrar</button></div></div>
+<label class="chk" data-m="login"><input type="checkbox" id="rem">Manter sessão neste dispositivo</label>
+<p class="note" data-m="recover" hidden>Quando a autenticação estiver ativa, enviaremos um link de redefinição para este e-mail.</p>
+<button type="submit" class="btn" id="go" disabled>Entrar</button>
+<p class="note w">não concluído</p>
+</form>
+</div>
+</section>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
