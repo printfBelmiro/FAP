@@ -27,6 +27,7 @@ FALP is a project focused on helping beginner programmers understand technical E
 
 Originally developed as an independent project, FALP became part of the FAP ecosystem as the broader initiative took shape.
 Initial Version right bellow:
+
 **Website:** https://printfbelmiro.github.io/FALP/
 
 ## Development
