@@ -26,7 +26,7 @@ The project aims to grow into an educational ecosystem that brings together diff
 FALP is a project focused on helping beginner programmers understand technical English commonly found in programming environments, software documentation, development tools, and error messages.
 
 Originally developed as an independent project, FALP became part of the FAP ecosystem as the broader initiative took shape.
-
+Initial Version right bellow:
 **Website:** https://printfbelmiro.github.io/FALP/
 
 ## Development
